@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="proj-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06120c" />
+      <stop offset="100%" stop-color="#143223" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#proj-grad-1)" />
+  <g stroke="rgba(200, 157, 60, 0.15)" stroke-width="1.2" fill="none">
+    <circle cx="600" cy="400" r="300" />
+    <path d="M100,600 C400,300 800,700 1100,400" />
+  </g>
+  <text x="80" y="680" font-family="'Cormorant Garamond', serif" font-size="36" fill="#f8f5ee">Multi-Tier Agroforestry Model</text>
+  <text x="80" y="720" font-family="'JetBrains Mono', monospace" font-size="14" fill="#c89d3c" letter-spacing="2">DEMONSTRATION GROUND // CANOPY ARCHITECTURE</text>
+</svg>

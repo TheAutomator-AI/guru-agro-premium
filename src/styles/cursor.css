@@ -1,0 +1,163 @@
+/* ==========================================================================
+   CUSTOM CURSOR SYSTEM — EDITORIAL BOTANICAL DESIGN
+   Activated only for hover: hover and pointer: fine devices
+   ========================================================================== */
+
+@media (hover: hover) and (pointer: fine) {
+  .custom-cursor-enabled,
+  .custom-cursor-enabled * {
+    cursor: none !important;
+  }
+}
+
+.cursor-root {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-cursor);
+  will-change: transform;
+}
+
+.cursor-dot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: var(--earth-gold);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+  box-shadow: 0 0 8px rgba(200, 157, 60, 0.6);
+}
+
+.cursor-follower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 9999px;
+  border: 1px solid rgba(248, 245, 238, 0.35);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.35s var(--ease-editorial),
+              height 0.35s var(--ease-editorial),
+              background-color 0.35s var(--ease-editorial),
+              border-color 0.35s var(--ease-editorial),
+              opacity 0.25s ease;
+  will-change: transform, width, height;
+}
+
+.cursor-text {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* Cursor State: VIEW (Over cinematic video) */
+.cursor-state-view .cursor-follower {
+  width: 72px;
+  height: 72px;
+  background-color: rgba(6, 18, 12, 0.75);
+  backdrop-filter: blur(8px);
+  border-color: rgba(200, 157, 60, 0.5);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.cursor-state-view .cursor-text {
+  opacity: 1;
+  color: var(--ivory-100);
+}
+
+.cursor-state-view .cursor-dot {
+  opacity: 0;
+}
+
+/* Cursor State: EXPLORE (Over main CTA) */
+.cursor-state-explore .cursor-follower {
+  width: 88px;
+  height: 88px;
+  background-color: rgba(200, 157, 60, 0.95);
+  border-color: var(--earth-gold-light);
+  box-shadow: 0 10px 30px rgba(200, 157, 60, 0.3);
+}
+
+.cursor-state-explore .cursor-text {
+  opacity: 1;
+  color: var(--botanical-950);
+}
+
+.cursor-state-explore .cursor-dot {
+  opacity: 0;
+}
+
+/* Cursor State: OPEN (Over navigation & interactive links) */
+.cursor-state-open .cursor-follower {
+  width: 76px;
+  height: 76px;
+  background-color: rgba(6, 18, 12, 0.85);
+  backdrop-filter: blur(8px);
+  border-color: var(--earth-gold);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+.cursor-state-open .cursor-text {
+  opacity: 1;
+  color: var(--earth-gold-light);
+}
+
+.cursor-state-open .cursor-dot {
+  opacity: 0;
+}
+
+/* Cursor State: CALL (Over telephone links) */
+.cursor-state-call .cursor-follower {
+  width: 76px;
+  height: 76px;
+  background-color: rgba(6, 18, 12, 0.85);
+  backdrop-filter: blur(8px);
+  border-color: var(--earth-gold);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+.cursor-state-call .cursor-text {
+  opacity: 1;
+  color: var(--earth-gold-light);
+}
+
+.cursor-state-call .cursor-dot {
+  opacity: 0;
+}
+
+/* Cursor State: DRAG */
+.cursor-state-drag .cursor-follower {
+  width: 64px;
+  height: 64px;
+  border: 1.5px dashed var(--earth-gold);
+  background-color: rgba(10, 28, 19, 0.7);
+}
+
+.cursor-state-drag .cursor-text {
+  opacity: 1;
+  color: var(--ivory-100);
+}
+
+.cursor-state-hidden {
+  opacity: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-root {
+    display: none !important;
+  }
+}

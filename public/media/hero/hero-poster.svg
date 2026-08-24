@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hero-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06120c" />
+      <stop offset="50%" stop-color="#0a1c13" />
+      <stop offset="100%" stop-color="#143223" />
+    </linearGradient>
+    <radialGradient id="sun-glow" cx="70%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="rgba(200, 157, 60, 0.25)" />
+      <stop offset="100%" stop-color="rgba(10, 28, 19, 0)" />
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#hero-grad)" />
+  <rect width="100%" height="100%" fill="url(#sun-glow)" />
+  
+  <!-- Architectural Contour Lines -->
+  <g stroke="rgba(248, 245, 238, 0.07)" stroke-width="1.5" fill="none">
+    <path d="M0,600 Q480,450 960,650 T1920,500" />
+    <path d="M0,700 Q480,550 960,750 T1920,600" />
+    <path d="M0,800 Q480,650 960,850 T1920,700" />
+    <path d="M0,900 Q480,750 960,950 T1920,800" />
+  </g>
+  
+  <!-- Subtle Geometry -->
+  <circle cx="1340" cy="320" r="180" stroke="rgba(200, 157, 60, 0.2)" stroke-width="1" fill="none" />
+  <circle cx="1340" cy="320" r="120" stroke="rgba(200, 157, 60, 0.1)" stroke-width="1" stroke-dasharray="4 8" fill="none" />
+  
+  <text x="120" y="540" font-family="'Cinzel', Georgia, serif" font-size="44" fill="#f8f5ee" letter-spacing="4">GURU AGRO PRODUCTS</text>
+  <text x="120" y="590" font-family="'Plus Jakarta Sans', sans-serif" font-size="18" fill="#c89d3c" letter-spacing="6">SUSTAINABLE AGRO-ECOSYSTEM ARCHITECTURE</text>
+</svg>
